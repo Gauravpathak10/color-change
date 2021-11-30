@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .radio span {
+        border: 2px solid gray;
+        width: 20px;
+        height: 20px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        top: -2px;
+        left: -5px;
+        background-color: white;
+
+
+    }
+
+    .radio input:checked~.check-mark {
+        border: 1px solid rgb(254, 252, 255);
+        display: block;
+        border-radius: 50%;
+
+    }
+    /* #span1{
+        background-color: yellow;
+    } */
+
+    .radio input:checked~#span1:after {
+        content: "";
+        background-color: rgb(179, 248, 17);
+        height: 12px;
+        width: 12px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        top: 3.8px;
+        left: 3.8px;
+    }
+    .radio input:checked~#span2:after {
+        content: "";
+        background-color: lightblue;
+        height: 12px;
+        width: 12px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        top: 3.8px;
+        left: 3.8px;
+    }
+    .radio input:checked~#span3:after {
+        content: "";
+        background-color: pink;
+        height: 12px;
+        width: 12px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        top: 3.8px;
+        left: 3.8px;
+    }
+
+    .box {
+        position: relative;
+        margin-right: 20px;
+    }
+
+    .radio {
+
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+</style>
+
+<body>
+    <!-- color  changes-->
+    <div class="radio">
+        <div class="box">
+            <label for="male">
+                <input type="radio" name="gender" value="male" id="male" onclick="fun();"  />
+                <span  id="span1"></span>
+            </label>
+        </div>
+        <div class="box">
+            <label for="female">
+                <input type="radio" name="gender" value="female" id="female" onclick="fun1();" />
+                <span id="span2"></span>
+            </label>
+        </div>
+
+        <div class="box">
+            <label for="other">
+                <input type="radio" name="gender" value="other" id="other" onclick="fun2();" />
+                <span id="span3"></span>
+            </label>
+        </div>
+    </div>
+    <!-- end -->
+    <script>
+        function fun() {
+            document.body.style.backgroundColor = "yellowgreen"
+            // document.getElementById("span1").style.backgroundColor="red";
+           
+        }
+        function fun1() {
+            document.body.style.backgroundColor = "lightblue"
+            
+        }
+        function fun2() {
+            document.body.style.backgroundColor = "pink"
+        }
+    </script>
+
+</body>
+
+</html>
